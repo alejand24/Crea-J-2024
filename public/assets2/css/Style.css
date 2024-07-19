@@ -1,0 +1,553 @@
+.logo, .brand-name {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .logo, .brand-name {
+        display: block;
+        text-align: center;
+    }
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Esto es lo que hace que la imagen no salga al hacerse más pequeña*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Jockey+One&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-image: url('../img/index.imagen2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: static;
+    height: 120vh; /* Ajusta la altura al 100% de la altura del viewport */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+.navbar {
+    background-color: transparent !important;
+    border: 0;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.nav-link.active{
+    margin-top: 2rem;
+}
+.navbar-nav .nav-item {
+    margin-right: 25px; /* Ajusta este valor para cambiar el espacio entre los elementos */
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-item {
+        margin-right: 0.5rem; /* Ajusta este valor para cambiar el espacio entre los elementos */
+    }
+}
+
+.nombre{
+    color: white;
+    font-size: 14pt;
+    font-family: 'Jockey One', sans-serif;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+    z-index: 55;
+    top: 45px;
+}
+
+.nombre:hover::before {
+    opacity: 1;
+    transform: scaleX(1); /* Llega al ancho completo */
+}
+
+.nombre::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Posición para que la línea esté dentro del texto */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de la animación */
+    transform: scaleX(0); /* Inicialmente no visible */
+}
+
+
+
+.nombre:hover {
+    color: #f6bc0c; /* Color de hover original */
+}
+
+
+.navbar-nav .nav-link.active {
+    color: white;
+    font-size: 14pt;
+    font-family: 'Jockey One', sans-serif;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Posición para que la línea esté dentro del texto */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de la animación */
+    transform: scaleX(0); /* Inicialmente no visible */
+}
+
+.navbar-nav .nav-link:hover::before {
+    opacity: 1;
+    transform: scaleX(1); /* Llega al ancho completo */
+}
+
+
+
+.navbar-nav .nav-link.active:hover {
+    color: #f6bc0c; /* Color de hover original */
+}
+
+.brand-name {
+    margin-top: -1rem;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 22pt;
+}
+
+.logo {
+    height: 6rem; /* Ajusta el tamaño según sea necesario */
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.offcanvas {
+    background-color: #2f3134; /* Color de fondo diferente */
+}
+
+.offcanvas-header .offcanvas-title {
+    display: flex;
+    align-items: center;
+}
+
+.offcanvas-header .offcanvas-title img {
+    max-height: 50px; /* Ajusta el tamaño máximo según sea necesario */
+}
+
+@media (max-width: 991px) {
+    .offcanvas-header .offcanvas-title::after {
+        content: "ByteMex";
+        font-weight: bold;
+        font-family: 'Jockey One';
+        color: white;
+        font-size: 26pt;
+        margin-left: 10px;
+    }
+}
+
+.btn-close {
+    background-color: white;
+}
+
+
+.titulo1 {
+    font-weight: bold;
+    color: #f8bf12;
+    font-family: 'Alata';
+    font-size: 104pt;
+}
+
+.titulo2 {
+    color: #f8bf12;
+    font-size: 25pt;
+    font-family: 'Oswald';
+    line-height: 1.5; /* Espacio vertical entre líneas */
+}
+
+.texto-responsive {
+    font-size: 18px;
+}
+
+/* Media queries para ajustar el tamaño del texto */
+@media (max-width: 1200px) {
+    .titulo1 {
+        font-size: 80pt;
+    }
+
+    .titulo2 {
+        font-size: 20pt;
+    }
+
+    .texto-responsive {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .titulo1 {
+        font-size: 60pt;
+    }
+
+    .titulo2 {
+        font-size: 18pt;
+    }
+
+    .texto-responsive {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo1 {
+        font-size: 40pt;
+    }
+
+    .titulo2 {
+        font-size: 16pt;
+    }
+
+    .texto-responsive {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo1 {
+        font-size: 30pt;
+    }
+
+    .titulo2 {
+        font-size: 14pt;
+    }
+
+    .texto-responsive {
+        font-size: 10px;
+    }
+}
+.wall{
+    margin-top: 12rem;
+    background-color: white;
+    height: 30px;
+    width: 100%;
+}
+
+
+.container-fluid {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Ocupa el 50% del ancho */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Para incluir el padding en el ancho */
+}
+
+.content-overlay h2 {
+    margin-bottom: 10px;
+}
+
+/* Media queries para hacer el contenido más pequeño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .content-overlay {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-overlay {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-overlay {
+        padding: 5px;
+    }
+}
+.conoce {
+    margin-top: 12rem;
+    font-family: 'Oswald';
+    font-size: 24pt;
+    font-weight: bold;
+    color: white;
+}
+
+.linea {
+    background-color: white;
+    height: 3px;
+}
+
+.texto2 {
+    margin-top: 3rem;
+    color: white;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.texto-responsive2 {
+    font-size: 18px;
+}
+
+/* Media queries para ajustar el tamaño del texto en pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .conoce {
+        margin-top: 10rem;
+        font-size: 22pt;
+    }
+
+    .texto2 {
+        margin-top: 2rem;
+        font-size: 18pt;
+    }
+
+    .texto-responsive2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .conoce {
+        margin-top: 8rem;
+        font-size: 20pt;
+    }
+
+    .texto2 {
+        margin-top: 1.5rem;
+        font-size: 16pt;
+    }
+
+    .texto-responsive2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conoce {
+        margin-top: 6rem;
+        font-size: 18pt;
+    }
+
+    .texto2 {
+        margin-top: 1.2rem;
+        font-size: 15pt;
+    }
+
+    .texto-responsive2 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .conoce {
+        margin-top: 4rem;
+        font-size: 16pt;
+    }
+
+    .texto2 {
+        margin-top: 1rem;
+        font-size: 14pt;
+    }
+
+    .texto-responsive2 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conoce {
+        margin-top: 3rem;
+        font-size: 14pt;
+    }
+
+    .texto2 {
+        margin-top: 0.8rem;
+        font-size: 12pt;
+    }
+
+    .texto-responsive2 {
+        font-size: 10px;
+    }
+}
+
+.wall2{
+    background-color: white;
+    height: 30px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.fila {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+.cuadro {
+    width: 45%; /* Cada cuadro ocupa el 45% del ancho en dispositivos grandes */
+    margin-bottom: 20px; /* Espacio entre cuadros */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.rojo {
+    background-color: #ff0000;
+}
+
+.amarillo {
+    background-color: #ffff00;
+}
+
+.texto {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media queries para hacer responsive */
+@media (max-width: 768px) {
+    .cuadro {
+        width: 100%; /* Cuadros ocupan todo el ancho en dispositivos pequeños */
+    }
+
+    .fila {
+        flex-direction: column; /* Cambia a disposición vertical en dispositivos pequeños */
+    }
+
+    .cuadro {
+        margin-bottom: 10px; /* Reducir espacio entre cuadros en dispositivos pequeños */
+    }
+}
+
+
+.custom-red {
+    background-color: #C92525; 
+}
+
+.custom-green {
+    background-color: #889C52;
+}
+
+button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   button::before,
+   button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   button::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   button::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   button:hover::before,
+   button:hover::after {
+    width: 58%;
+   }
+   
+   button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
