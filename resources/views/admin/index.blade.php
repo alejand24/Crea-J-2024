@@ -28,7 +28,7 @@
         }
     </script>
 
-    <!-- Modal de registro datos-->
+    <!-- Parte de registro datos-->
     <div class="modal fade" id="modalRegistrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -107,7 +107,7 @@
 
                         
 
-                        <!-- Modal de modificar datos-->
+                        <!-- Parte de modificar datos-->
                         <div class="modal fade" id="modalEditar{{$item->id_producto}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
